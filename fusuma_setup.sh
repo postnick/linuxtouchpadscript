@@ -1,16 +1,17 @@
 #!/bin/bash
 #https://italolelis.com/posts/multitouch-gestures-ubuntu-fusuma//
+#you may have to chmod this to 775 and run as SUDO to get it to work
 
 #clearout the screen
 clear
 
 #Adds user to the input group
-sudo gpasswd -a $USER input
+gpasswd -a $USER input
 
 #runs the update and installs appropriate files
-sudo apt update
-sudo apt install ruby gem libinput-tools xdotool
-sudo gem install fusuma
+apt update
+apt install ruby gem libinput-tools xdotool
+gem install fusuma
 
 #makes the required configuration folders
 mkdir '~/.config/fusuma'
